@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    
+    <title>Archive of Rain</title>
+</head>
+<body class="base">
+    <div class="title">
+        <h1 class="title-text">Archive of Rain</h1>
+        <div class="auth">
+            <button class="login-button" id="login-toggle" type="button" aria-expanded="false" aria-controls="auth-dropdown">
+                Login / Register
+            </button>
+            <section class="auth-dropdown" id="auth-dropdown" aria-label="Account access" hidden>
+                <div class="auth-tabs" role="tablist" aria-label="Choose an account action">
+                    <button class="auth-tab" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-form">Log in</button>
+                    <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-form">Create account</button>
+                </div>
+                <form id="login-form" class="auth-form" role="tabpanel" aria-labelledby="login-tab">
+                    <h2>Log in</h2>
+                    <label for="login-email">Email</label>
+                    <input id="login-email" name="email" type="email" autocomplete="email" required>
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                    <button class="auth-submit" type="submit">Log in</button>
+                </form>
+                <form id="signup-form" class="auth-form" role="tabpanel" aria-labelledby="signup-tab" hidden>
+                    <h2>Create account</h2>
+                    <label for="signup-username">Username</label>
+                    <input id="signup-username" name="username" type="text" autocomplete="username" required>
+                    <label for="signup-email">Email</label>
+                    <input id="signup-email" name="email" type="email" autocomplete="email" required>
+                    <label for="signup-password">Password (at least 6 characters)</label>
+                    <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="6" required>
+                    <button class="auth-submit" type="submit">Create account</button>
+                </form>
+                <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+            </section>
+        </div>
+    </div>
+    <div class="info-base">
+        <h1>kay was here</h1>
+
+    </div>
+<script src="dropdown.js"></script>
+<script type="module" src="firebase.js"></script>
+</body>
+</html>
