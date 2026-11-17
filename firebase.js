@@ -58,7 +58,7 @@ async function submitAuthForm(form, authenticate, successMessage) {
 onAuthStateChanged(auth, (user) => {
   if (isProfilePage) {
     if (!user) {
-      window.location.replace("AOR-home.html");
+      window.location.replace("index.html");
       return;
     }
     if (profileUsername) {
